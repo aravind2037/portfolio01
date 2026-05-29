@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashritha Portfolio</title>
+
+<style>
+/* ================= GLOBAL ================= */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg,#cdbcd1,#b493b4);
+    color: rgb(30, 30, 30);
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* ================= NAVBAR ================= */
+nav {
+    background: #7c647b;
+    padding: 15px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(180, 178, 179, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav h2 {
+    margin: 0;
+    color: #1c1c1c;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #1c1c1c;
+    font-weight: 500;
+}
+
+/* ================= SECTIONS ================= */
+section {
+    padding: 70px 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.highlight-box {
+    background: #7c647b;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(72, 27, 76, 0.2);
+}
+
+/* ================= HOME ================= */
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 190px;
+    border-radius: 10%;
+    object-fit: cover;
+    border: 4px solid #c0c3c3;
+}
+
+.resume-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    background: #616262;
+    color: rgb(39, 38, 38);
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ================= PROJECTS ================= */
+.card {
+    background: #574256;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 25px;
+    border: 1px solid rgba(251, 248, 248, 0.9);
+}
+
+/* ================= SKILLS ================= */
+.skills span {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #4e4f4f;
+    color: rgb(20, 20, 20);
+    border-radius: 25px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+/* ================= CONTACT ================= */
+.contact a {
+    display: inline-block;
+    margin: 15px;
+    padding: 12px 30px;
+    background: #515253;
+    color: rgb(42, 41, 41);
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 130px;
+        height: 170px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    p, li {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .skills span {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+
+    .contact a, .resume-btn {
+        font-size: 14px;
+        padding: 10px 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Ashritha</h2>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<section id="home">
+<div class="container">
+<div class="highlight-box profile-section">
+    <img src="profile.jpeg" class="profile-pic">
+    <div>
+        <h1>Hello, I'm Ashritha Abbu</h1>
+         <p>
+        AI & Data Science enthusiast passionate about solving real-world problems 
+        through machine learning, automation, and scalable web applications.
+        </p>
+
+        <a href="resume.pdf" class="resume-btn">Download Resume</a>
+    </div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+<div class="highlight-box">
+<h1>About Me</h1>
+<p>I specialize in Artificial Intelligence, Machine Learning, and Full Stack Development.</p>
+<p>I enjoy transforming data into insights and building real-world applications.</p>
+<p>
+My work focuses on predictive modeling, automation pipelines, and intelligent
+web-based platforms.
+</p>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+<div class="highlight-box">
+<h1>Projects</h1>
+
+<!-- <div class="card">
+<h3>Chef Booking Website</h3>
+<p>Full-stack platform connecting users with professional chefs.</p>
+<b>Technologies:</b> HTML, CSS, JavaScript, Flask
+</div>
+
+<div class="card">
+<h3>Forest Fire Detection Using AI</h3>
+<p>Deep learning system for early forest fire detection.</p>
+<b>Technologies:</b> Python, TensorFlow
+</div>
+
+<div class="card">
+<h3>Telegram News Sentiment Analysis</h3>
+<p>NLP pipeline for multilingual news analysis.</p>
+<b>Technologies:</b> Python, NLP
+</div> -->
+
+
+<!-- CHEF BOOKING -->
+<div class="card">
+<h3>Chef Booking Website</h3>
+
+<p>
+Developed a full-stack web platform that connects users with professional chefs for 
+home events, parties, and customized food services. The system focuses on convenience 
+and service personalization.
+</p>
+
+<ul>
+<li>Created chef profile management with cuisine specialization</li>
+<li>Developed booking and scheduling system</li>
+<li>Integrated rating and review system</li>
+<li>Designed responsive UI for multiple devices</li>
+<li>Implemented secure login authentication</li>
+</ul>
+
+<b>Impact:</b> Simplifies event food service booking and improves user experience.
+
+<br><br>
+<b>Technologies:</b> HTML, CSS, JavaScript, Python, Flask
+</div>
+
+<!-- FOREST FIRE -->
+<div class="card">
+<h3>Forest Fire Detection Using AI</h3>
+
+<p>
+Developed an AI-based early fire detection system using deep learning and image 
+classification techniques to reduce environmental damage.
+</p>
+
+<ul>
+<li>Used CNN with transfer learning techniques</li>
+<li>Performed dataset preprocessing & augmentation</li>
+<li>Trained model to classify fire and non-fire images</li>
+<li>Evaluated accuracy using performance metrics</li>
+</ul>
+
+<b>Impact:</b> Helps in early forest fire detection and disaster prevention.
+
+<br><br>
+<b>Technologies:</b> Python, TensorFlow, Deep Learning
+</div>
+
+<!-- NEWS GPT -->
+<div class="card">
+<h3>NewsGPT – AI News Summarization & Q&A System</h3>
+
+<p>
+Built an AI-powered system that retrieves, summarizes, and answers questions 
+from real-time news articles using NLP and Retrieval-Augmented Generation (RAG).
+</p>
+
+<ul>
+<li>Implemented RAG pipeline for contextual news understanding</li>
+<li>Integrated LLM for summarization and question answering</li>
+<li>Performed web scraping/API-based news data collection</li>
+<li>Used embeddings and vector database for efficient retrieval</li>
+</ul>
+
+<b>Impact:</b> Enables users to quickly understand and interact with large volumes of news content.
+
+<br><br>
+<b>Technologies:</b> Python, LangChain, FAISS, OpenAI API, NLP
+</div>
+
+
+<!-- MEDICAL CHATBOT -->
+<div class="card">
+<h3>AI Medical Chatbot for Symptom-Based Assistance</h3>
+
+<p>
+Developed an intelligent medical chatbot that provides basic health guidance 
+based on user symptoms using NLP and machine learning techniques.
+</p>
+
+<ul>
+<li>Designed conversational chatbot using NLP models</li>
+<li>Implemented symptom-to-disease prediction logic</li>
+<li>Integrated knowledge base for medical responses</li>
+<li>Ensured safe and general-purpose health recommendations</li>
+</ul>
+
+<b>Impact:</b> Assists users with preliminary health insights and improves accessibility to medical information.
+
+<br><br>
+<b>Technologies:</b> Python, NLP, Machine Learning, Flask
+</div>
+
+</div>
+</section>
+
+
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="skills">
+<div class="container">
+<div class="highlight-box">
+<h1>Skills</h1>
+<div class="skills">
+<span>Python</span>
+<span>Artificial Intelligence</span>
+<span>Machine Learning</span>
+<span>Data Science</span>
+<span>Deep Learning</span>
+<span>NLP</span>
+<span>TensorFlow</span>
+<span>RAG</span>
+<span>APIs</span>
+
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="highlight-box">
+<h1>Contact Me</h1>
+<div class="contact">
+<a href="mailto:ashrithareddyabbu@gmail.com">Email</a>
+<a href="https://linkedin.com/in/ashrithareddy-abbu-598382266">LinkedIn</a>
+<a href="https://github.com/Ashritha-5">GitHub</a>
+</div>
+</div>
+</div>
+</section>
+
+</body>
+</html>
